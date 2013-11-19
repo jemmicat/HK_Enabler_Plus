@@ -1,0 +1,66 @@
+2013-09-30 21:03:11.263:  !
+2013-09-30 21:03:11.263:  ! NavCoder v2.9.183.Beta [EN-US] [Multi-protocol] logging started
+2013-09-30 21:03:11.263:  ! Running on Windows 7 Ultimate Edition, 64-bit (Service Pack 1)  [en-US]
+2013-09-30 21:03:11.263:  ! [Debug Mode]
+2013-09-30 21:03:11.263:  ! [Multi-procotol enabled]
+2013-09-30 21:03:11.263:  ! [Procotol = Auto]
+2013-09-30 21:03:18.252:  ! Databus protocol unknown, starting Protocol Detection...
+2013-09-30 21:03:18.252:  ! Detecting protocol via analysis of received data; trying i/k-bus protocol...
+2013-09-30 21:03:18.267:  ! Bus protocol set to I/K-bus
+2013-09-30 21:03:18.267:  ! Protocol detection successful
+2013-09-30 21:03:19.624:  !------------------------------------------------------
+2013-09-30 21:03:19.624:  !     Workbench Mode (no vehicle detected), Protocol = i/k-bus
+2013-09-30 21:03:19.624:  !------------------------------------------------------
+2013-09-30 21:03:19.812:  68 04 FF 02 01 90
+2013-09-30 21:03:19.812:  ! RAD  --> LOC : Device status ready, after Reset
+2013-09-30 21:03:19.827:  68 05 18 38 00 00 4D
+2013-09-30 21:03:19.827:  ! RAD  --> CDC : CD_control, Status_Request
+2013-09-30 21:03:19.827:  68 05 73 3D 00 00 23
+2013-09-30 21:03:19.827:  ! RAD  --> SDRS: Cmd_0x3D, Data="00 00"
+2013-09-30 21:03:19.827:  68 03 D0 5D E6
+2013-09-30 21:03:19.827:  ! RAD  --> LCM : Light dimmer status request
+2013-09-30 21:03:19.843:  68 03 18 01 72
+2013-09-30 21:03:19.843:  ! RAD  --> CDC : Device status request
+2013-09-30 21:03:19.843:  68 03 76 01 1C
+2013-09-30 21:03:19.843:  ! RAD  --> CDCD: Device status request
+2013-09-30 21:03:19.843:  68 03 73 01 19
+2013-09-30 21:03:19.843:  ! RAD  --> SDRS: Device status request
+
+2013-09-30 21:03:22.269:  80 04 BF 11 01 2B
+2013-09-30 21:03:22.269:  ! IKE  --> GLO : Ignition status, Pos1_Acc
+
+2013-09-30 21:03:22.566:  68 04 FF 02 04 95
+2013-09-30 21:03:22.566:  ! RAD  --> LOC : Device status ready, Bit2
+
+2013-09-30 21:03:22.815:  80 04 BF 11 01 2B
+2013-09-30 21:03:22.815:  ! IKE  --> GLO : Ignition status, Pos1_Acc
+
+2013-09-30 21:03:23.575:  6A 04 68 02 01 05
+2013-09-30 21:03:23.575:  ! DSP  --> RAD : Device status ready, after Reset
+2013-09-30 21:03:23.590:  68 04 6A 36 AF 9F
+2013-09-30 21:03:23.606:  ! RAD  --> DSP : Audio_control, Source = Off
+2013-09-30 21:03:23.606:  68 04 6A 36 6C 5C
+2013-09-30 21:03:23.606:  ! RAD  --> DSP : Audio_control, Bass = +12
+2013-09-30 21:03:23.621:  68 04 6A 36 C0 F0
+2013-09-30 21:03:23.621:  ! RAD  --> DSP : Audio_control, Treble = 0
+2013-09-30 21:03:23.637:  68 04 6A 36 94 A4
+2013-09-30 21:03:23.637:  ! RAD  --> DSP : Audio_control, Fader = Rear 4
+2013-09-30 21:03:23.653:  68 04 6A 36 40 70
+2013-09-30 21:03:23.653:  ! RAD  --> DSP : Audio_control, Balance = Center_0
+2013-09-30 21:03:23.668:  68 04 6A 36 E3 D3
+2013-09-30 21:03:23.668:  ! RAD  --> DSP : Audio_control, DSP_Function 3
+2013-09-30 21:03:23.684:  68 04 6A 34 08 3A
+2013-09-30 21:03:23.684:  ! RAD  --> DSP : DSP equaliser button, Data="08"
+2013-09-30 21:03:23.699:  68 05 6A 34 90 00 A3
+2013-09-30 21:03:23.699:  ! RAD  --> DSP : DSP equaliser button, Data="90 00"
+2013-09-30 21:03:23.699:  68 04 6A 36 A1 91
+2013-09-30 21:03:23.699:  ! RAD  --> DSP : Audio_control, Source = Tuner/Tape
+2013-09-30 21:03:23.715:  68 04 6A 32 F1 C5
+2013-09-30 21:03:23.715:  ! RAD  --> DSP : Volume Control, Increase 15 steps
+2013-09-30 21:03:23.731:  68 04 6A 32 61 55
+2013-09-30 21:03:23.731:  ! RAD  --> DSP : Volume Control, Increase 6 steps
+
+2013-09-30 21:03:42.565:  68 04 6A 36 AF 9F
+2013-09-30 21:03:42.565:  ! RAD  --> DSP : Audio_control, Source = Off
+2013-09-30 21:03:42.627:  80 04 BF 11 00 2A
+2013-09-30 21:03:42.627:  ! IKE  --> GLO : Ignition status, Off

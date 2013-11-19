@@ -1,0 +1,186 @@
+2013-09-30 21:03:11.263:  !
+2013-09-30 21:03:11.263:  ! NavCoder v2.9.183.Beta [EN-US] [Multi-protocol] logging started
+2013-09-30 21:03:11.263:  ! Running on Windows 7 Ultimate Edition, 64-bit (Service Pack 1)  [en-US]
+2013-09-30 21:03:11.263:  ! [Debug Mode]
+2013-09-30 21:03:11.263:  ! [Multi-procotol enabled]
+2013-09-30 21:03:11.263:  ! [Procotol = Auto]
+2013-09-30 21:03:18.252:  ! Databus protocol unknown, starting Protocol Detection...
+2013-09-30 21:03:18.252:  ! Detecting protocol via analysis of received data; trying i/k-bus protocol...
+2013-09-30 21:03:18.267:  ! Bus protocol set to I/K-bus
+2013-09-30 21:03:18.267:  ! Protocol detection successful
+2013-09-30 21:03:19.624:  !------------------------------------------------------
+2013-09-30 21:03:19.624:  !     Workbench Mode (no vehicle detected), Protocol = i/k-bus
+2013-09-30 21:03:19.624:  !------------------------------------------------------
+2013-09-30 21:03:19.624:  00 04 BF 02 00 B9
+2013-09-30 21:03:19.624:  ! GM   --> GLO : Device status ready, 
+2013-09-30 21:03:19.780:  80 04 BF 02 00 39
+2013-09-30 21:03:19.780:  ! IKE  --> GLO : Device status ready, 
+2013-09-30 21:03:19.780:  80 04 BF 11 00 2A
+2013-09-30 21:03:19.780:  ! IKE  --> GLO : Ignition status, Off
+2013-09-30 21:03:19.780:  3F 04 D0 02 02 EB
+2013-09-30 21:03:19.780:  ! DIA  --> LCM : Read AIS, Block 02
+2013-09-30 21:03:19.796:  00 06 BF 7A 51 21 00 B3
+2013-09-30 21:03:19.796:  ! GM   --> GLO : Doors/flaps status, Open:  DvrDoorFr WndwDvr Boot   Ctrl_Locking: Unlocked
+2013-09-30 21:03:19.796:  00 06 5B 83 00 00 A8 76
+2013-09-30 21:03:19.796:  ! GM   --> IHKA: Air conditioning compressor status, Off
+2013-09-30 21:03:19.812:  00 10 3F A0 54 44 72 13 40 06 82 07 61 02 00 07 FF A6
+2013-09-30 21:03:19.812:  ! GM   --> DIA : Diagnostic command acknowledged, Data="54 44 72 13 40 06 82 07 61 02 00 07 FF"    [TDr @ ‚ a   ÿ]
+2013-09-30 21:03:19.812:  68 04 FF 02 01 90
+2013-09-30 21:03:19.812:  ! RAD  --> LOC : Device status ready, after Reset
+2013-09-30 21:03:19.812:  3F 04 D0 02 02 EB
+2013-09-30 21:03:19.812:  ! DIA  --> LCM : Read AIS, Block 02
+2013-09-30 21:03:19.827:  00 10 3F A0 54 44 72 13 40 06 82 07 61 02 00 07 FF A6
+2013-09-30 21:03:19.827:  ! GM   --> DIA : Diagnostic command acknowledged, Data="54 44 72 13 40 06 82 07 61 02 00 07 FF"    [TDr @ ‚ a   ÿ]
+2013-09-30 21:03:19.827:  68 05 18 38 00 00 4D
+2013-09-30 21:03:19.827:  ! RAD  --> CDC : CD_control, Status_Request
+2013-09-30 21:03:19.827:  68 05 73 3D 00 00 23
+2013-09-30 21:03:19.827:  ! RAD  --> SDRS: Cmd_0x3D, Data="00 00"
+2013-09-30 21:03:19.827:  68 03 D0 5D E6
+2013-09-30 21:03:19.827:  ! RAD  --> LCM : Light dimmer status request
+2013-09-30 21:03:19.827:  3F 04 D0 02 02 EB
+2013-09-30 21:03:19.827:  ! DIA  --> LCM : Read AIS, Block 02
+2013-09-30 21:03:19.843:  00 10 3F A0 54 44 72 13 40 06 82 07 61 02 00 07 FF A6
+2013-09-30 21:03:19.843:  ! GM   --> DIA : Diagnostic command acknowledged, Data="54 44 72 13 40 06 82 07 61 02 00 07 FF"    [TDr @ ‚ a   ÿ]
+2013-09-30 21:03:19.843:  08 04 BF 02 01 B0
+2013-09-30 21:03:19.843:  ! SHD  --> GLO : Device status ready, after Reset
+2013-09-30 21:03:19.843:  68 03 18 01 72
+2013-09-30 21:03:19.843:  ! RAD  --> CDC : Device status request
+2013-09-30 21:03:19.843:  68 03 76 01 1C
+2013-09-30 21:03:19.843:  ! RAD  --> CDCD: Device status request
+2013-09-30 21:03:19.843:  68 03 73 01 19
+2013-09-30 21:03:19.843:  ! RAD  --> SDRS: Device status request
+2013-09-30 21:03:20.139:  44 05 BF 74 00 FF 75
+2013-09-30 21:03:20.139:  ! EWS  --> GLO : Immobiliser status, No_key_detected Vehicle_immobilised
+2013-09-30 21:03:21.833:  44 05 BF 74 04 01 8F
+2013-09-30 21:03:21.833:  ! EWS  --> GLO : Immobiliser status, Valid_key_detected Key_1
+2013-09-30 21:03:21.879:  80 06 44 73 00 00 80 31
+2013-09-30 21:03:21.879:  ! IKE  --> EWS : Immobiliser status request, Data="00 00 80"
+2013-09-30 21:03:21.911:  44 05 BF 74 04 01 8F
+2013-09-30 21:03:21.911:  ! EWS  --> GLO : Immobiliser status, Valid_key_detected Key_1
+2013-09-30 21:03:22.269:  80 07 BF 5C FF 00 7F 00 E4
+2013-09-30 21:03:22.269:  ! IKE  --> GLO : Light dimmer, 255 (max)
+2013-09-30 21:03:22.269:  80 04 BF 11 01 2B
+2013-09-30 21:03:22.269:  ! IKE  --> GLO : Ignition status, Pos1_Acc
+2013-09-30 21:03:22.316:  80 0C BF 13 03 00 00 04 00 00 00 00 00 27
+2013-09-30 21:03:22.316:  ! IKE  --> GLO : IKE sensor status, Handbrake_On  Oil_Pressure_Low
+2013-09-30 21:03:22.316:  80 07 BF 5C FF 3F 00 00 A4
+2013-09-30 21:03:22.316:  ! IKE  --> GLO : Light dimmer, Data="FF 3F 00 00"
+2013-09-30 21:03:22.488:  44 05 BF 74 05 01 8E
+2013-09-30 21:03:22.488:  ! EWS  --> GLO : Immobiliser status, Immobilisation_deactivated Valid_key_detected Key_1
+2013-09-30 21:03:22.535:  A4 06 BF 70 03 00 25 4B
+2013-09-30 21:03:22.535:  ! AB   --> GLO : Remote control central locking status, Data="03 00 25"
+2013-09-30 21:03:22.535:  5B 07 80 15 00 02 00 00 CB
+2013-09-30 21:03:22.535:  ! IHKA --> IKE : Country coding status, Ntwk=E38/E39 Lang=DE_German Clock=24h OutTemp=°F AvgSpd=km/h Limit=km Dist=km ArrTime=24h Consump=l/100_km Motor=Petrol
+2013-09-30 21:03:22.535:  5B 06 80 83 00 00 FF A1
+2013-09-30 21:03:22.535:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:22.566:  5B 04 00 87 00 D8
+2013-09-30 21:03:22.566:  ! IHKA --> GM  : Aux Heating/Vent status request, : Data="00"
+2013-09-30 21:03:22.566:  5B 04 00 8B 04 D0
+2013-09-30 21:03:22.566:  ! IHKA --> GM  : Cmd_0x8B, Data="04"
+2013-09-30 21:03:22.566:  68 04 FF 02 04 95
+2013-09-30 21:03:22.566:  ! RAD  --> LOC : Device status ready, Bit2
+2013-09-30 21:03:22.800:  5B 03 80 10 C8
+2013-09-30 21:03:22.800:  ! IHKA --> IKE : Ignition status request
+2013-09-30 21:03:22.800:  5B 03 80 14 CC
+2013-09-30 21:03:22.800:  ! IHKA --> IKE : Country coding status request
+2013-09-30 21:03:22.815:  80 04 BF 11 01 2B
+2013-09-30 21:03:22.815:  ! IKE  --> GLO : Ignition status, Pos1_Acc
+2013-09-30 21:03:22.831:  80 07 BF 15 B2 12 12 00 9F
+2013-09-30 21:03:22.831:  ! IKE  --> GLO : Country coding status, Ntwk=R50 Lang=US_English Clock=24h OutTemp=°F AvgSpd=mph Limit=km Dist=km ArrTime=24h Consump=0x02 Motor=Petrol
+2013-09-30 21:03:22.847:  5B 03 80 1D C5
+2013-09-30 21:03:22.847:  ! IHKA --> IKE : Temperature request
+2013-09-30 21:03:22.862:  5B 03 80 5D 85
+2013-09-30 21:03:22.862:  ! IHKA --> IKE : Light dimmer status request
+2013-09-30 21:03:22.878:  80 06 BF 19 16 80 00 B6
+2013-09-30 21:03:22.878:  ! IKE  --> GLO : Temperature, Outside 22°C [72°F], Coolant -128°C [-198°F]
+2013-09-30 21:03:22.893:  80 07 BF 5C FF 3F 00 00 A4
+2013-09-30 21:03:22.893:  ! IKE  --> GLO : Light dimmer, Data="FF 3F 00 00"
+2013-09-30 21:03:22.987:  80 0A FF 24 03 00 37 32 20 20 20 77
+2013-09-30 21:03:22.987:  ! IKE  --> LOC : Update Text, Layout=Outside_Temp  Flags=  F0="72   "
+2013-09-30 21:03:23.387:  5B 04 BF 02 01 E3
+2013-09-30 21:03:23.387:  ! IHKA --> GLO : Device status ready, after Reset
+2013-09-30 21:03:23.406:  5B 07 80 15 00 02 00 00 CB
+2013-09-30 21:03:23.406:  ! IHKA --> IKE : Country coding status, Ntwk=E38/E39 Lang=DE_German Clock=24h OutTemp=°F AvgSpd=km/h Limit=km Dist=km ArrTime=24h Consump=l/100_km Motor=Petrol
+2013-09-30 21:03:23.425:  80 07 BF 15 B2 02 00 00 9D
+2013-09-30 21:03:23.425:  ! IKE  --> GLO : Country coding status, Ntwk=R50 Lang=US_English Clock=24h OutTemp=°F AvgSpd=km/h Limit=km Dist=km ArrTime=24h Consump=l/100_km Motor=Petrol
+2013-09-30 21:03:23.477:  80 07 BF 15 B2 12 12 00 9F
+2013-09-30 21:03:23.477:  ! IKE  --> GLO : Country coding status, Ntwk=R50 Lang=US_English Clock=24h OutTemp=°F AvgSpd=mph Limit=km Dist=km ArrTime=24h Consump=0x02 Motor=Petrol
+2013-09-30 21:03:23.575:  6A 04 68 02 01 05
+2013-09-30 21:03:23.575:  ! DSP  --> RAD : Device status ready, after Reset
+2013-09-30 21:03:23.590:  68 04 6A 36 AF 9F
+2013-09-30 21:03:23.606:  ! RAD  --> DSP : Audio_control, Source = Off
+2013-09-30 21:03:23.606:  68 04 6A 36 6C 5C
+2013-09-30 21:03:23.606:  ! RAD  --> DSP : Audio_control, Bass = +12
+2013-09-30 21:03:23.621:  68 04 6A 36 C0 F0
+2013-09-30 21:03:23.621:  ! RAD  --> DSP : Audio_control, Treble = 0
+2013-09-30 21:03:23.637:  68 04 6A 36 94 A4
+2013-09-30 21:03:23.637:  ! RAD  --> DSP : Audio_control, Fader = Rear 4
+2013-09-30 21:03:23.653:  68 04 6A 36 40 70
+2013-09-30 21:03:23.653:  ! RAD  --> DSP : Audio_control, Balance = Center_0
+2013-09-30 21:03:23.668:  68 04 6A 36 E3 D3
+2013-09-30 21:03:23.668:  ! RAD  --> DSP : Audio_control, DSP_Function 3
+2013-09-30 21:03:23.684:  68 04 6A 34 08 3A
+2013-09-30 21:03:23.684:  ! RAD  --> DSP : DSP equaliser button, Data="08"
+2013-09-30 21:03:23.699:  68 05 6A 34 90 00 A3
+2013-09-30 21:03:23.699:  ! RAD  --> DSP : DSP equaliser button, Data="90 00"
+2013-09-30 21:03:23.699:  68 04 6A 36 A1 91
+2013-09-30 21:03:23.699:  ! RAD  --> DSP : Audio_control, Source = Tuner/Tape
+2013-09-30 21:03:23.715:  68 04 6A 32 F1 C5
+2013-09-30 21:03:23.715:  ! RAD  --> DSP : Volume Control, Increase 15 steps
+2013-09-30 21:03:23.731:  68 04 6A 32 61 55
+2013-09-30 21:03:23.731:  ! RAD  --> DSP : Volume Control, Increase 6 steps
+2013-09-30 21:03:24.214:  44 03 80 16 D1
+2013-09-30 21:03:24.214:  ! EWS  --> IKE : Odometer request
+2013-09-30 21:03:24.277:  80 0A BF 17 D4 8A 02 65 9C 40 00 C7
+2013-09-30 21:03:24.277:  ! IKE  --> GLO : Odometer, 166,612 kms  [103,528 mls]
+2013-09-30 21:03:25.337:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:25.337:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:25.392:  80 07 BF 5C FF 3F FF 00 5B
+2013-09-30 21:03:25.392:  ! IKE  --> GLO : Light dimmer, Data="FF 3F FF 00"
+2013-09-30 21:03:26.310:  A4 05 80 41 01 01 60
+2013-09-30 21:03:26.310:  ! AB   --> IKE : On-board computer data request, Time: current value request
+2013-09-30 21:03:26.372:  A4 06 BF 70 02 00 25 4A
+2013-09-30 21:03:26.372:  ! AB   --> GLO : Remote control central locking status, Data="02 00 25"
+2013-09-30 21:03:27.324:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:27.324:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:29.321:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:29.321:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:29.399:  A4 05 80 41 02 01 63
+2013-09-30 21:03:29.399:  ! AB   --> IKE : On-board computer data request, Date: current value request
+2013-09-30 21:03:31.302:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:31.302:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:33.299:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:33.299:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:35.295:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:35.295:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:37.292:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:37.292:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:39.289:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:39.289:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:40.740:  80 07 BF 5C FF 3F FF 00 5B
+2013-09-30 21:03:40.740:  ! IKE  --> GLO : Light dimmer, Data="FF 3F FF 00"
+2013-09-30 21:03:41.270:  5B 06 80 83 00 00 37 69
+2013-09-30 21:03:41.270:  ! IHKA --> IKE : Air conditioning compressor status, Off
+2013-09-30 21:03:42.565:  68 04 6A 36 AF 9F
+2013-09-30 21:03:42.565:  ! RAD  --> DSP : Audio_control, Source = Off
+2013-09-30 21:03:42.627:  80 04 BF 11 00 2A
+2013-09-30 21:03:42.627:  ! IKE  --> GLO : Ignition status, Off
+2013-09-30 21:03:43.189:  44 05 BF 74 01 FF 74
+2013-09-30 21:03:43.189:  ! EWS  --> GLO : Immobiliser status, Immobilisation_deactivated Vehicle_immobilised
+2013-09-30 21:03:44.870:  68 04 FF 02 00 91
+2013-09-30 21:03:44.870:  ! RAD  --> LOC : Device status ready, 
+2013-09-30 21:03:49.565:  00 06 BF 7A 51 21 00 B3
+2013-09-30 21:03:49.565:  ! GM   --> GLO : Doors/flaps status, Open:  DvrDoorFr WndwDvr Boot   Ctrl_Locking: Unlocked
+2013-09-30 21:03:49.581:  D0 07 BF 5B 00 60 00 00 53
+2013-09-30 21:03:49.581:  ! LCM  --> GLO : Lamp status, All_Off Faulty: Indicator_Left Indicator_Right
+2013-09-30 21:03:49.596:  00 04 BF 86 00 3D
+2013-09-30 21:03:49.596:  ! GM   --> GLO : Aux Heating/Vent status , All Off
+2013-09-30 21:03:49.612:  00 06 BF 7A 50 21 00 B2
+2013-09-30 21:03:49.612:  ! GM   --> GLO : Doors/flaps status, Open:  WndwDvr Boot   Ctrl_Locking: Unlocked
+2013-09-30 21:03:49.628:  00 05 BF 7D 00 00 C7
+2013-09-30 21:03:49.628:  ! GM   --> GLO : Sunroof control, Lock
+2013-09-30 21:03:49.643:  00 04 BF 76 00 CD
+2013-09-30 21:03:49.643:  ! GM   --> GLO : Crash Alarm, No_Crash
+2013-09-30 21:03:52.591:  44 05 BF 74 00 FF 75
+2013-09-30 21:03:52.591:  ! EWS  --> GLO : Immobiliser status, No_key_detected Vehicle_immobilised
+2013-09-30 21:03:55.966:  ! NavCoder logging stopped by user
