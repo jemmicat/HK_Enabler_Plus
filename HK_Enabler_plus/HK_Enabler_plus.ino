@@ -25,6 +25,7 @@
 #include <SoftwareSerial.h>
 #include <Wire.h>
 
+
 ///////////////////////////////////////////////////////////////////////////
 // Pin/Button connections...
 //PCB has connections for 4 buttons at D2, D4, D5, and D6
@@ -52,6 +53,7 @@
 
 SoftwareSerial mySerial(9, 8); // RX, TX for LCD screen
 
+
 /////////////////////////////////////////////////////////////
 
 #define MAX_EXPECTED_LEN 64
@@ -73,25 +75,6 @@ SoftwareSerial mySerial(9, 8); // RX, TX for LCD screen
 boolean Radio_turned_on; 
 boolean Radio_ready;
 int packet_delay = 30;
-
-//ADXL345 Defines
-#define Register_ID 0
-#define Register_2D 0x2D
-#define Register_X0 0x32
-#define Register_X1 0x33
-#define Register_Y0 0x34
-#define Register_Y1 0x35
-#define Register_Z0 0x36
-#define Register_Z1 0x37
-
-int ADXAddress = 0xA7 >> 1;  // the default 7-bit slave address
-int reading = 0;
-int val=0;
-int X0,X1,X_out;
-int Y0,Y1,Y_out;
-int Z1,Z0,Z_out;
-double Xg,Yg,Zg;
-
 
 // buffer for building outgoing packets
 uint8_t tx_buf[TX_BUF_LEN];
@@ -120,7 +103,6 @@ void setup() {
   Radio_turned_on = false; 
   Radio_ready = false;
   
-  Wire.begin();
   
   // set up serial for IBus; 9600,8,E,1 I set these up directly as they didn't seem to work right using Arduino call out
     Serial1.begin(9600);
@@ -134,11 +116,6 @@ void setup() {
   //LCD Serial
    mySerial.begin(9600); 
    
-  // enable to measute g data
-  Wire.beginTransmission(ADXAddress);
-  Wire.write(Register_2D);
-  Wire.write(8);                //measuring enable
-  Wire.endTransmission();     // stop transmitting
    
 } 
 
@@ -156,7 +133,7 @@ void loop() {
   while ((Radio_turned_on == true) && (Radio_ready == true)){       
   ;
   }
- 
+
 } 
 
 // {{{ process_incoming_data
