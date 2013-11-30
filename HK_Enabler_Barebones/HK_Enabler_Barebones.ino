@@ -16,30 +16,6 @@
 // buttons to change sound mode can be added at digital pins
 // if not interfacing steering wheel buttons to radio, they can be mapped to digital pins to control things
 
-#include <EEPROM.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-// Pin/Button connections...
-//PCB has connections for 4 buttons at D2, D4, D5, and D6
-#define DSP_mode    2
-#define SENSTA      3
-#define Volume_plus 4
-#define Fader_front 5
-#define Fader_rear  6
-
-/*
- * LEDs:
- *   red: missed poll from radio
- *   yellow: processing incoming IBus data
- *   green: sending IBus data
- *   
- *   yellow + green: contention/collision when sending
- */
-#define LED_ERR      10 // red
-#define LED_IBUS_RX  16 // yellow
-#define LED_IBUS_TX  14 // green
 
 #define MAX_EXPECTED_LEN 64
 
@@ -78,12 +54,7 @@ unsigned long ledOffTime; // 500ms interval
 unsigned long readTimeout; // variable
 
 
-void setup() { 
-  pinMode (SENSTA, OUTPUT);
-  pinMode (DSP_mode,INPUT_PULLUP);
-  pinMode (Fader_front, INPUT_PULLUP);
-  pinMode (Fader_rear, INPUT_PULLUP);
-  pinMode (Volume_plus, INPUT_PULLUP);  
+void setup() {  
   
   Radio_turned_on = false; 
   Radio_ready = false;
@@ -131,7 +102,7 @@ boolean process_incoming_data() {
     uint8_t bytes_availble = Serial1.available();
     
     if (bytes_availble) {
-        digitalWrite(LED_IBUS_RX, HIGH);
+        //digitalWrite(LED_IBUS_RX, HIGH);
     }
     
     // filter out packets from sources we don't care about
@@ -208,7 +179,7 @@ boolean process_incoming_data() {
         }
     } // if (bytes_availble  >= 2)
     
-    digitalWrite(LED_IBUS_RX, LOW);
+    //digitalWrite(LED_IBUS_RX, LOW);
 
     return found_message;
 }
@@ -278,9 +249,9 @@ void send_raw_ibus_packet_P(PGM_P pgm_data, size_t pgm_data_len) {
 boolean send_raw_ibus_packet(uint8_t *data, size_t data_len) {
     boolean sent_successfully = false;
        
-    digitalWrite(LED_IBUS_TX, HIGH);
+    //digitalWrite(LED_IBUS_TX, HIGH);
     ledOffTime = millis() + 500L;
-    digitalWrite(LED_IBUS_RX, LOW);   
+    //digitalWrite(LED_IBUS_RX, LOW);   
     Serial1.write(data, data_len);
     sent_successfully = true;
     return sent_successfully;
