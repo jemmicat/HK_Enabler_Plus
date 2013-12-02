@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define HMC5883L_h
 
 #include <inttypes.h>
-#include "../Wire/Wire.h"
+#include <Wire.h>
 
 #define HMC5883L_Address 0x1E
 #define ConfigurationRegisterA 0x00
