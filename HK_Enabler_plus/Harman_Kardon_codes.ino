@@ -1,7 +1,7 @@
 //This sends the HK Enabler codes
 
 
-void HK_Enabler() {  
+void Send_HK_Codes() {  
       
   if (Radio_turned_on == false){
     Send_radio_broadcast();

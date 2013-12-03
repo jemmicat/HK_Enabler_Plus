@@ -123,7 +123,7 @@ void setup() {
 
 void loop() {  
       
-    HK_Enabler();
+    Send_HK_Codes();
 
 }  
 
