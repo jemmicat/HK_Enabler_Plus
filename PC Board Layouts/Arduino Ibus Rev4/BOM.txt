@@ -1,0 +1,210 @@
+ 
+ 
+
+Line
+No. Mouser Part Number
+Customer Part No.
+Manufacturer Part Number
+Description Estimated
+Shipment
+Date(s) Quantity Unit Price
+USD Extended Price
+USD 
+
+1 
+RoHS: Compliant1  
+  
+  
+  
+ 649-63429-202LF
+63429-202LF
+2P 1R JUMPER WHITE  11/25/13 10 0.098 0.98 
+
+2  
+RoHS: Compliant1  
+  
+  
+  
+ 815-ABBTM-2.4GHZ-T
+ABBTM-2.4GHz-T
+2.4GHz 8MB Flash  11/25/13 1 18.460 18.46 
+
+3 
+RoHS: Compliant1  
+  
+  
+  
+ 511-STM811TW16F
+STM811TW16F
+3.08V Reset 140ms  11/25/13 2 0.760 1.52 
+
+4  
+RoHS: Compliant1  
+  
+  
+  
+ 595-UA78M05IDCYR
+UA78M05IDCYR
+5V 500mA Fixed Pos  11/25/13 2 0.640 1.28 
+
+5 
+RoHS: Compliant1  
+  
+  
+  
+ 595-UA78M33CDCYRG3
+UA78M33CDCYRG3
+3.3 V 500mA Fix Pos  11/25/13 1 0.600 0.60 
+
+6  
+RoHS: Compliant through Exemption2  
+  
+  
+  
+ 660-RK73B2BTTD103J
+RK73B2BTTD103J
+1/4watts 10Kohms 5%  11/25/13 10 0.017 0.17 
+
+7 
+RoHS: Compliant1  
+  
+  
+  
+ 77-VJ1206Y104KXJPBC
+VJ1206Y104KXJPW1BC
+1206 0.1uF 16volts  11/25/13 10 0.060 0.60 
+
+8  
+RoHS: Compliant1  
+  
+  
+  
+ 80-T491D476K010
+T491D476K010AT
+10V 47uF 10% "D"  11/25/13 1 1.000 1.00 
+
+9 
+RoHS: Compliant1  
+  
+  
+  
+ 576-1206L050/15YR
+1206L050/15YR
+15V 1206 .500A  11/25/13 5 0.430 2.15 
+
+10  
+RoHS: Compliant1  
+  
+  
+  
+ 517-929974-01-12-RK
+929974-01-12-RK
+12 CON  11/25/13 2 1.330 2.66 
+
+11 
+RoHS: Compliant1  
+  
+  
+  
+ 859-LTST-C230KFKT
+LTST-C230KFKT
+Orange Clear  11/25/13 5 0.120 0.60 
+
+12  
+RoHS: Compliant1  
+  
+  
+  
+ 720-LGN971-KN-1
+LG N971-KN-1
+Green, 570nm  11/25/13 10 0.057 0.57 
+
+13 
+RoHS: Compliant1  
+  
+  
+  
+ 720-LHN974-KN-1
+LH N974-KN-1
+Hyper Red, 645nm  11/25/13 10 0.057 0.57 
+
+14  
+RoHS: Compliant1  
+  
+  
+  
+ 652-CD1206-S01575
+CD1206-S01575
+IO=150mA VR=75V  11/25/13 10 0.093 0.93 
+
+15 
+RoHS: Compliant1  
+  
+  
+  
+ 810-C3216X5R1E476M
+C3216X5R1E476M160AC
+1206 47uF 25volts  11/25/13 3 1.250 3.75 
+
+16  
+RoHS: Compliant1  
+  
+  
+  
+ 810-C3216X5R1C685K
+C3216X5R1C685K160AA
+1206 6.8uF 16V  11/25/13 5 0.430 2.15 
+
+17 
+RoHS: Compliant through Exemption2  
+  
+  
+  
+ 77-VJ12Y50V472J
+VJ1206Y472JXAAT
+1206 4700pF 50volts  11/25/13 10 0.080 0.80 
+
+18  
+RoHS: Compliant through Exemption2  
+  
+  
+  
+ 581-12061A820J
+12061A820JAT2A
+1206 82pF 100volts  11/25/13 6 0.250 1.50 
+
+19 
+RoHS: Compliant1  
+  
+  
+  
+ 667-ERJ-8GEYJ221V
+ERJ-8GEYJ221V
+1206 220ohms  11/25/13 20 0.024 0.48 
+
+20  
+RoHS: Compliant1  
+  
+  
+  
+ 667-ERJ-8GEYJ103V
+ERJ-8GEYJ103V
+1206 10Kohms  11/25/13 30 0.024 0.72 
+
+21 
+RoHS: Compliant through Exemption2  
+  
+  
+  
+ 71-CRCW1206J-10-E3
+CRCW120610R0JNEA
+1/4watt 10ohms 5%  11/25/13 10 0.030 0.30 
+
+22  
+RoHS: Compliant1  
+  
+  
+  
+ 642-MJTP1230A
+MJTP1230A
+6mm square tact  11/25/13 15 0.180 2.70 
