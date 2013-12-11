@@ -1,18 +1,5 @@
  
  
-
-Line
-No. Mouser Part Number
-Customer Part No.
-Manufacturer Part Number
-Description Estimated
-Shipment
-Date(s) Quantity Unit Price
-USD Extended Price
-USD 
-
-1 
-RoHS: Compliant1  
   
   
   
@@ -20,23 +7,6 @@ RoHS: Compliant1
 63429-202LF
 2P 1R JUMPER WHITE  11/25/13 10 0.098 0.98 
 
-2  
-RoHS: Compliant1  
-  
-  
-  
- 815-ABBTM-2.4GHZ-T
-ABBTM-2.4GHz-T
-2.4GHz 8MB Flash  11/25/13 1 18.460 18.46 
-
-3 
-RoHS: Compliant1  
-  
-  
-  
- 511-STM811TW16F
-STM811TW16F
-3.08V Reset 140ms  11/25/13 2 0.760 1.52 
 
 4  
 RoHS: Compliant1  
@@ -47,23 +17,6 @@ RoHS: Compliant1
 UA78M05IDCYR
 5V 500mA Fixed Pos  11/25/13 2 0.640 1.28 
 
-5 
-RoHS: Compliant1  
-  
-  
-  
- 595-UA78M33CDCYRG3
-UA78M33CDCYRG3
-3.3 V 500mA Fix Pos  11/25/13 1 0.600 0.60 
-
-6  
-RoHS: Compliant through Exemption2  
-  
-  
-  
- 660-RK73B2BTTD103J
-RK73B2BTTD103J
-1/4watts 10Kohms 5%  11/25/13 10 0.017 0.17 
 
 7 
 RoHS: Compliant1  
