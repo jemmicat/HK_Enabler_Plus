@@ -1,39 +1,31 @@
-Partlist
-
-Exported from Arduino Ibus.brd at 11/24/2013 6:26:59 PM
-
-EAGLE Version 6.5.0 Copyright (c) 1988-2013 CadSoft
-
-Assembly variant: 
-
-Part       Value                 Package            Library                    Position (inch)       Orientation
-
-10DOF_IMU  M10LOCK_LONGPADS      1X10_LOCK_LONGPADS SparkFun-Connectors        (0.09 0.25)           R90
-C1         6.8uF                 C1206              resistor                   (0.927 0.577)         R90
-C2         47uF                  C1206              resistor                   (1.636 0.716)         R0
-C3         .047uF                C1206              resistor                   (1.899 0.716)         R0
-C4         100pF                 C1206              resistor                   (1.997 0.484)         R0
-D1         1N4148                SMA-DIODE          SparkFun-DiscreteSemi      (1.669 0.912)         R180
-FUSE       PTCSMD                PTC-1206           SparkFun-PowerIC           (1.884 0.967)         R90
-IC1        LM340MP-05            SOT223             linear                     (1.25 0.71)           R270
-JP1        M12LONGPADS           1X12_LONGPADS      SparkFun-Connectors        (0.25 1.15)           R0
-JP2        M12LONGPADS           1X12_LONGPADS      SparkFun-Connectors        (1.35 0.25)           R180
-JP3        FTDI_DEVICE           FTDI_DEVICE_SIDE   SparkFun-Connectors        (1.7 1.33)            MR180
-JP6                              1X03               pinhead                    (2.1 1.03)            R270
-LCD_SERIAL                       1X03_LOCK_LONGPADS SparkFun-Connectors        (0.15 1.32)           R0
-LED1                             LED-1206           SparkFun-LED               (0.53 0.57)           MR270
-LED2                             LED-1206           SparkFun-LED               (0.66 0.57)           MR270
-LED3                             LED-1206           SparkFun-LED               (0.4 0.57)            MR270
-MICRO      ARDUINO_PRO_MICRO     ARDUINO_PRO_MICRO  SparkFun-Boards            (0.85 0.7)            R270
-R1         10                    1206               SparkFun-Passives          (2.098 0.733)         R270
-R6         220                   1206               SparkFun-Passives          (0.36 0.83)           MR270
-R7         220                   1206               SparkFun-Passives          (0.6 0.83)            MR270
-R8         220                   1206               SparkFun-Passives          (0.48 0.83)           MR270
-RESET      SWITCH-MOMENTARY-2SMD TACTILE_SWITCH_SMD SparkFun-Electromechanical (1.78 0.48)           R90
-RX-TX                            JP3Q               jumper                     (1.67 1.13)           R180
-S1         SWITCH-MOMENTARY-2SMD TACTILE_SWITCH_SMD SparkFun-Electromechanical (1.57 0.48)           MR270
-S2         SWITCH-MOMENTARY-2SMD TACTILE_SWITCH_SMD SparkFun-Electromechanical (1.78 0.62)           MR90
-S3         SWITCH-MOMENTARY-2SMD TACTILE_SWITCH_SMD SparkFun-Electromechanical (1.78 0.33)           MR270
-S4         SWITCH-MOMENTARY-2SMD TACTILE_SWITCH_SMD SparkFun-Electromechanical (1.99 0.48)           MR90
-SENSTA     0R-JUMPB              B0R-JMP            jump-0r-smd                (0.71 0.82)           MR180
-U$1        TH3122                SO16W              Melexisth3122              (1.118 0.7)           MR0
+Part,Value,Supplier, Part No.                           
+,,,
+10DOF_IMU,  M10LOCK_LONGPADS             ,,
+C1,         6.8uF                                                 ,,
+C2 ,       47uF                                             ,,
+C3  ,       .047uF                                              ,,
+C4   ,      100pF                                            ,,
+D1    ,     1N4148                          ,,
+FUSE   ,    PTCSMD                                ,,
+IC1     ,   LM340MP-05                                        ,,
+JP1      ,  M12LONGPADS                  ,,
+JP2       , M12LONGPADS                     ,,
+JP3        ,FTDI_DEVICE                   ,,
+JP6         ,                                                   ,,
+LCD_SERIAL,                             ,,
+LED1       ,                                       ,,
+LED2        ,                                       ,,
+LED3         ,                               ,,
+MICRO      ,ARDUINO_PRO_MICRO      ,,
+R1         ,10,,
+R6         ,220,,
+R7         ,220,,
+R8         ,220,,
+RESET      ,SWITCH-MOMENTARY-2SMD ,,
+RX-TX      ,                                   ,,
+S1         ,SWITCH-MOMENTARY-2SMD  ,,
+S2         ,SWITCH-MOMENTARY-2SMD ,,
+S3         ,SWITCH-MOMENTARY-2SMD,,
+S4         ,SWITCH-MOMENTARY-2SMD  ,,
+SENSTA     ,0R-JUMPB                                               ,,
+U$1        ,TH3122                                                   ,,
