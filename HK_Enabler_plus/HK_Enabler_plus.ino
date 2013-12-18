@@ -49,15 +49,15 @@
  *   
  *   yellow + green: contention/collision when sending
  */
-#define LED_ERR      5 // red
-#define LED_IBUS_RX  6 // yellow
-#define LED_IBUS_TX  7 // green
+#define LED_RED      5 // red
+#define LED_ORANGE  6 // yellow
+#define LED_GREEN  7 // green
 
 //i2C connections for IMU
 #define i2C_SDA 2 
 #define i2C_SCL 3
 
-SoftwareSerial mySerial(9, 8); // RX, TX for LCD screen
+SoftwareSerial LCD_Serial(9, 8); // RX, TX for LCD screen
 
 
 /////////////////////////////////////////////////////////////
@@ -100,7 +100,10 @@ void setup() {
   pinMode (DSP_mode,INPUT_PULLUP);
   pinMode (Fader_front, INPUT_PULLUP);
   pinMode (Fader_rear, INPUT_PULLUP);
-  pinMode (Volume_plus, INPUT_PULLUP);  
+  pinMode (Volume_plus, INPUT_PULLUP);
+  pinMode (LED_RED, OUTPUT);  
+  pinMode (LED_ORANGE, OUTPUT);
+  pinMode (LED_GREEN, OUTPUT);
   
   Radio_turned_on = false; 
   Radio_ready = false;
@@ -116,7 +119,7 @@ void setup() {
     Serial.begin(9600);
    
   //LCD Serial
-   mySerial.begin(9600); 
+   LCD_Serial.begin(9600); 
    
    
 } 
