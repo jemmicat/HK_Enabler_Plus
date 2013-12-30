@@ -212,6 +212,7 @@ void decode_packet(const uint8_t *packet) {
 // {{{ send_radio settings
 void Send_radio_settings() {
       
+    delay(200);
     Send_initialize_begin();
     delay(packet_delay); 
     Send_bass_level();
