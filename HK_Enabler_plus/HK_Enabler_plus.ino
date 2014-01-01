@@ -1,4 +1,4 @@
-// JCDesigns HK Enabler PLUS Arduino Version 1.0
+// JCDesigns HK Enabler PLUS Arduino Version 1.0.5
 // Uses Sparkfun Arduino Pro Micro (Or equivalent)https://www.sparkfun.com/products/11098
 // Uses TH3122.4 chip Sourced from http://www.ebay.com/itm/2x-Melexis-TH3122-4-IBUS-I-Bus-K-Bus-Transceiver-/221296386461?pt=LH_DefaultDomain_0&hash=item33864ae19d
 // Uses PC Board Sourced From OSH Park (3 boards for $5 sq in)
@@ -50,7 +50,8 @@
  *   yellow + green: contention/collision when sending
  */
 #define LED_RED      5 // red
-#define LED_ORANGE  6 // yellow
+#define LED_ORANGE  6 // orange
+
 #define LED_GREEN  7 // green
 
 //i2C connections for IMU
