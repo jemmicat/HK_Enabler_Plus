@@ -81,7 +81,7 @@ SoftwareSerial LCD_Serial(9, 8); // RX, TX for LCD screen
 
 boolean Radio_turned_on; 
 boolean Radio_ready;
-int packet_delay = 30;
+int packet_delay = 20;
 
 // buffer for building outgoing packets
 uint8_t tx_buf[TX_BUF_LEN];
