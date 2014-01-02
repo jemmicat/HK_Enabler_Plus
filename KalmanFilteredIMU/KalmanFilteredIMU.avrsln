@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{D1100916-62DA-4D80-A9B4-55A1E7CCEEB3}") = "KalmanFilteredIMU", "KalmanFilteredIMU\KalmanFilteredIMU.avrgccproj", "{6969CC8F-DA64-4455-8556-8644121C6690}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6969CC8F-DA64-4455-8556-8644121C6690}.Debug|AVR.ActiveCfg = Debug|AVR
+		{6969CC8F-DA64-4455-8556-8644121C6690}.Debug|AVR.Build.0 = Debug|AVR
+		{6969CC8F-DA64-4455-8556-8644121C6690}.Release|AVR.ActiveCfg = Release|AVR
+		{6969CC8F-DA64-4455-8556-8644121C6690}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

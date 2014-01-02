@@ -1,0 +1,16 @@
+* Use external makefile in the project properties
+The makefile is located in the debug folder of the project
+
+* Open the makefile and locate this paragraph in
+# AVR/GNU C/C++ Linker (close to the end of the makefile)
+
+
+	$(QUOTE)$(AVR_APP_PATH)avr-g++.exe$(QUOTE)  -mmcu=atmega328p  -Wl,-Map=$(MAP_FILE_PATH_AS_ARGS) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS)
+
+
+
+* Replace it with that:
+	$(QUOTE)$(AVR_APP_PATH)avr-g++.exe$(QUOTE) -Wl,-lm  -mmcu=atmega328p  -Wl,-Map=$(MAP_FILE_PATH_AS_ARGS) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-lm
+
+
+(added "-Wl,-lm " at the end and before mmcu)
