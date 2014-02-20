@@ -37,7 +37,7 @@
 
 boolean Radio_turned_on; 
 boolean Radio_ready;
-int packet_delay = 30;
+int packet_delay = 40;
 
 // buffer for building outgoing packets
 uint8_t tx_buf[TX_BUF_LEN];
@@ -219,7 +219,7 @@ void decode_packet(const uint8_t *packet) {
 // {{{ send_radio settings
 void Send_radio_settings() {
       
-    delay(200);
+    delay(500);
     Send_initialize_begin();
     delay(packet_delay); 
     Send_bass_level();
@@ -268,7 +268,7 @@ boolean send_raw_ibus_packet(uint8_t *data, size_t data_len) {
         
         // check that the receive buffer doesn't get any data during the timer cycle
         while ((TCNT4 < CONTENTION_TIMEOUT) && (! contention)) {
-            if (! (PIND & _BV(2))) { // pin was pulled low, so data being received
+            if ((PIND & _BV(2)) == 0) { // pin was pulled low, so data being received
                 contention = true;
             }
         }
@@ -276,7 +276,7 @@ boolean send_raw_ibus_packet(uint8_t *data, size_t data_len) {
         if (contention) {
             // someone's sending data; we cannot send
             
-            delay(20 * (retryCnt + 1));
+            delay(packet_delay * (retryCnt + 1));
         }
         else {
         
