@@ -1,4 +1,5 @@
-// JCDesigns HK Enabler Arduino Version 1.0
+// JCDesigns HK Enabler Arduino Version 1.1
+// V. 1.1 includes retries on sendin to elimnate problems on the bus
 // Uses Sparkfun Arduino Pro Micro (Or equivalent)https://www.sparkfun.com/products/11098
 // Uses TH3122.4 chip Sourced from http://www.ebay.com/itm/2x-Melexis-TH3122-4-IBUS-I-Bus-K-Bus-Transceiver-/221296386461?pt=LH_DefaultDomain_0&hash=item33864ae19d
 // Uses PC Board Sourced From OSH Park (3 boards for $5 sq in)
@@ -21,6 +22,7 @@
 
 #define TX_BUF_LEN 80
 #define RX_BUF_LEN (MAX_EXPECTED_LEN + 2)
+#define CONTENTION_TIMEOUT 173
 
 // addresses of IBus devices
 #define RAD_ADDR  0x68
@@ -35,7 +37,7 @@
 
 boolean Radio_turned_on; 
 boolean Radio_ready;
-int packet_delay = 30;
+int packet_delay = 40;
 
 // buffer for building outgoing packets
 uint8_t tx_buf[TX_BUF_LEN];
@@ -58,7 +60,12 @@ void setup() {
   
   Radio_turned_on = false; 
   Radio_ready = false;
-          
+
+   // Set up timer2 at Fcpu/64 for contention detection. Must be done before 
+    // any IBus serial activity!
+    //     CS22:1, CS21:0, CS20:0
+    TCCR4B = _BV(CS42); // ~_BV(CS21) | ~_BV(CS20);          
+  
   // set up serial for IBus; 9600,8,E,1 I set these up directly as they didn't seem to work right using Arduino call out
     Serial1.begin(9600);
     UCSR1C |= (1 << UPM11);
@@ -212,7 +219,7 @@ void decode_packet(const uint8_t *packet) {
 // {{{ send_radio settings
 void Send_radio_settings() {
       
-    delay(200);
+    delay(300);
     Send_initialize_begin();
     delay(packet_delay); 
     Send_bass_level();
@@ -249,12 +256,42 @@ void send_raw_ibus_packet_P(PGM_P pgm_data, size_t pgm_data_len) {
 // {{{ 
 boolean send_raw_ibus_packet(uint8_t *data, size_t data_len) {
     boolean sent_successfully = false;
-       
-    //digitalWrite(LED_IBUS_TX, HIGH);
-    ledOffTime = millis() + 500L;
-    //digitalWrite(LED_IBUS_RX, LOW);   
-    Serial1.write(data, data_len);
-    sent_successfully = true;
+
+    // check for bus contention before sending
+    // 10 retries before failing (which should be *very* generous)
+    for (uint8_t retryCnt = 0; (retryCnt < 10) && (! sent_successfully); retryCnt++) {
+        // wait for line to become clear
+        boolean contention = false;
+        
+        // reset timer2 value
+        TCNT4 = 0;
+        
+        // check that the receive buffer doesn't get any data during the timer cycle
+        while ((TCNT4 < CONTENTION_TIMEOUT) && (! contention)) {
+            //if (!(PIND & _BV(2))) { // pin was pulled low, so data being received
+            if ((PIND & _BV(2)) == 0) {
+                contention = true;
+            }
+        }
+        
+        if (contention) {
+            // someone's sending data; we cannot send
+            
+            delay(packet_delay * (retryCnt + 1));
+        }
+        else {
+        
+            // disableSerialReceive();
+            // Serial.flush();
+        
+            Serial1.write(data, data_len);
+
+            // enableSerialReceive();
+
+            sent_successfully = true;
+        }
+    }
+    
     return sent_successfully;
 }
 
@@ -321,6 +358,7 @@ void Send_initialize_end(){
 }
  
 void Send_volume(){
+  delay(packet_delay);
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x32\xF1\xC5"), 6); //volume +15
   delay(packet_delay);
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x32\xF1\xC5"), 6); //volume +15
