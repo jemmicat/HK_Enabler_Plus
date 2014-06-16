@@ -2,7 +2,9 @@
 
 
 void Send_HK_Codes() {  
-      
+  
+  clearScreen();
+  
   if (Radio_turned_on == false){
     Send_radio_broadcast();
     Radio_turned_on = true;
@@ -12,8 +14,10 @@ void Send_HK_Codes() {
   process_incoming_data();
   }
   
-  while ((Radio_turned_on == true) && (Radio_ready == true)){       
-  ;
+  while ((Radio_turned_on == true) && (Radio_ready == true)){
+  clearScreen();
+  selectLineOne();
+  LCD.print("Radio On");    
   }
  
 } 
@@ -41,7 +45,7 @@ boolean process_incoming_data() {
     // reset in the RX interrupt I think this will at least avoid getting 
     // stuck waiting for enough data to arrive
     if (bytes_availble && (Serial1.peek(PKT_SRC) != DSP_ADDR) && (Serial1.peek(PKT_SRC) != SW_ADDR)) {
-        //DEBUG_PGM_PRINTLN("[IBus] dropping byte from unknown source");
+        
         Serial1.remove(1);
     }
     // need at least two bytes to a packet, src and length
@@ -53,7 +57,7 @@ boolean process_incoming_data() {
             (data_len == 0)                || // length cannot be zero
             (data_len >= MAX_EXPECTED_LEN)    // we don't handle messages larger than this
         ) {
-            //DEBUG_PGM_PRINTLN("[IBus] invalid packet length");     
+                
             Serial1.remove(1);
         }
         else {
@@ -86,10 +90,7 @@ boolean process_incoming_data() {
                     }                   
                     decode_packet(rx_buf);
                 }
-                else {
-                    // invalid checksum; drop first byte in buffer and try
-                    // again
-                    //DEBUG_PGM_PRINTLN("[IBus] invalid checksum");
+                else {                   
                     Serial1.remove(1);
                 }
             } // if (bytes_availble …)
@@ -108,10 +109,7 @@ boolean process_incoming_data() {
                 }
             }
         }
-    } // if (bytes_availble  >= 2)
-    
-    //digitalWrite(LED_IBUS_RX, LOW);
-
+    } 
     return found_message;
 }
 // }}}
@@ -180,12 +178,46 @@ void send_raw_ibus_packet_P(PGM_P pgm_data, size_t pgm_data_len) {
 // {{{ 
 boolean send_raw_ibus_packet(uint8_t *data, size_t data_len) {
     boolean sent_successfully = false;
-       
-    //digitalWrite(LED_IBUS_TX, HIGH);
-    ledOffTime = millis() + 500L;
-    //digitalWrite(LED_IBUS_RX, LOW);   
-    Serial1.write(data, data_len);
-    sent_successfully = true;
+    traffic = digitalRead(SENSTA);
+    clearScreen();
+
+    // check for bus contention before sending
+    // 10 retries before failing (which should be *very* generous)
+    for (uint8_t retryCnt = 0; (retryCnt < 10) && (! sent_successfully); retryCnt++) {
+        // wait for line to become clear
+        boolean contention = false;
+        
+        // reset timer2 value
+        TCNT4 = 0;
+        
+        // check that the receive buffer doesn't get any data during the timer cycle
+        while ((TCNT4 < CONTENTION_TIMEOUT) && (! contention)) {
+            if (traffic == HIGH) { // pin was pulled low, so data being received
+                contention = true;
+                selectLineOne();
+                LCD.print("Traffic On Line");
+                
+            }
+        }
+        
+        if (contention) {
+            // someone's sending data; we cannot send
+            
+            //delay(packet_delay * (retryCnt + 1));
+            delay(retry_delay + (retryCnt + 1));
+            selectLineTwo();
+            LCD.print(retryCnt, DEC);
+        }
+        else {
+     
+            Serial1.write(data, data_len);
+            sent_successfully = true;
+            clearScreen();
+            selectLineOne();
+            LCD.print("Package Sent");
+        }
+    }
+    
     return sent_successfully;
 }
 
@@ -193,32 +225,47 @@ boolean send_raw_ibus_packet(uint8_t *data, size_t data_len) {
 void Send_radio_broadcast(){
   send_raw_ibus_packet_P(PSTR("\x68\x04\xFF\x02\x04\x95"), 6);
   Serial.println("Broadcast Message Sent");
+  clearScreen();
+  selectLineOne();
+  LCD.print("Broadcast Message Sent");
 }
 
 void Send_initialize_begin(){  
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\xAF\x9F"), 6);
   Serial.println("Initialize Sent");
+  selectLineTwo();
+  LCD.print("Initialize Sent");
 }
 
 void Send_bass_level(){ 
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\x60\x50"), 6); //center
   Serial.println("Bass Level Sent");
+  clearScreen();
+  selectLineOne();
+  LCD.print("Bass Level Sent");
 }
 
 void Send_treble_level(){ 
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\xC0\xF0"), 6); //center
   Serial.println("Treble Level Sent");
+  selectLineTwo();
+  LCD.print("Treble Level Sent");
 }
 
 void Send_fader_value(){  
   //send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\x80\xB0"), 6); //center
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\x94\xA4"), 6); //I prefer fader biased to the back slightly
   Serial.println("Fader Value Sent");
+  clearScreen();
+  selectLineOne();
+  LCD.print("Fader Value Sent");
 } 
  
 void Send_balance_value(){ 
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\x40\x70"), 6); //center
   Serial.println("Balance Value Sent");
+  selectLineTwo();
+  LCD.print("Balance Value Sent");
 } 
 
 void Send_radio_mode(){  
@@ -228,6 +275,9 @@ void Send_radio_mode(){
   //send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\xE6\xD6"), 6); //Instrumental Mode
   //send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\xE7\xD7"), 6); //Festival Mode
   Serial.println("Radio Mode Sent");
+  clearScreen();
+  selectLineOne();
+  LCD.print("Radio Mode Sent");
 } 
 
 void Send_dsp_mode(){  
@@ -237,6 +287,8 @@ void Send_dsp_mode(){
   //send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x34\x0B\x3D"), 6); //Instrumental Mode
   //send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x34\x0C\x3E"), 6); //Festival Mode
   Serial.println("DSP Mode Sent");
+  selectLineTwo();
+  LCD.print("DSP Mode Sent");
 }  
   
 void Send_driver_mode(){ 
@@ -244,22 +296,30 @@ void Send_driver_mode(){
   send_raw_ibus_packet_P(PSTR("\x68\x05\x6A\x34\x90\x00\xA3"), 7); //Driver Mode On
   //send_raw_ibus_packet_P(PSTR("\x68\x05\x6A\x34\x91\x00\xA4"), 7); //Driver Mode On
   Serial.println("Driver Mode Sent");
+  clearScreen();
+  selectLineOne();
+  LCD.print("Driver Mode Sent");
 }
 
 void Send_initialize_end(){
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x36\xA1\x91"), 6);
   Serial.println("Initialize End Sent");
+  selectLineTwo();
+  LCD.print("Initialize End Sent");
 }
  
 void Send_volume(){
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x32\xF1\xC5"), 6); //volume +15
-  delay(packet_delay);
+  //delay(packet_delay);
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x32\xF1\xC5"), 6); //volume +15
-  delay(packet_delay);
+  //delay(packet_delay);
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x32\xF1\xC5"), 6); //volume +15
-  delay(packet_delay);
+  //delay(packet_delay);
   send_raw_ibus_packet_P(PSTR("\x68\x04\x6A\x32\x31\x05"), 6); //volume +3
   Serial.println("Volume Sent");
+  clearScreen();
+  selectLineOne();
+  LCD.print("Volume Sent");
 }
 // }}} 
 
