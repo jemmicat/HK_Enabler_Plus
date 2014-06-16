@@ -38,7 +38,7 @@
 
 boolean Radio_turned_on; 
 boolean Radio_ready;
-int packet_delay = 40;
+int packet_delay = 0;
 int retry_delay = 5;
 
 // buffer for building outgoing packets

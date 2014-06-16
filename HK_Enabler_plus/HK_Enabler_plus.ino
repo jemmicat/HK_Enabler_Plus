@@ -112,7 +112,6 @@ void setup() {
   Radio_turned_on = false; 
   Radio_ready = false;
   
-  toggleSplash();
   
   
   // set up serial for IBus; 9600,8,E,1 I set these up directly as they didn't seem to work right using Arduino call out
@@ -125,13 +124,18 @@ void setup() {
     Serial.begin(9600);
    
   //LCD Serial
-   LCD.begin(9600); 
+   LCD.begin(9600);
+  
+  //toggleSplash();
+  //turnDisplayOn();
+  //backlight(157);// 128 = OFF, 157 = Fully ON, everything inbetween = varied brightnbess 
+ 
    
    
 } 
 
 void loop() {  
-      
+    LCD.print("Hello"); 
     Send_HK_Codes();
 
 }  

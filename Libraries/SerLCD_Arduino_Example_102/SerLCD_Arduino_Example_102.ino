@@ -38,7 +38,7 @@ If we meet some day, and you think this stuff is worth it, you can buy me a beer
 ************************************************************************/
 #include <SoftwareSerial.h>
 
-SoftwareSerial LCD(4,7); // RX, TX
+SoftwareSerial LCD(9,8); // RX, TX
 
 //-------------------------------------------------------------------------------------------
 void setup()
